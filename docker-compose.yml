@@ -1,0 +1,28 @@
+services:
+  client1:
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    container_name: client1
+
+  client2:
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    container_name: client2
+
+  client3:
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    container_name: client3
+
+  client4:
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    container_name: client4
