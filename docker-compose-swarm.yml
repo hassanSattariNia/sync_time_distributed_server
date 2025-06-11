@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  client1:
+    image: 10.10.209.206:5000/test_time:v0.01
+    deploy:
+      placement:
+        constraints:
+          - node.labels.node == node1
+
+  client2:
+    image: 10.10.209.206:5000/test_time:v0.01
+    deploy:
+      placement:
+        constraints:
+          - node.labels.node == node2
+
+  client3:
+    image: 10.10.209.206:5000/test_time:v0.01
+    deploy:
+      placement:
+        constraints:
+          - node.labels.node == node3
+
+  client4:
+    image: 10.10.209.206:5000/test_time:v0.01
+    deploy:
+      placement:
+        constraints:
+          - node.labels.node == node4
+
+networks:
+  communication:
+    driver: overlay
